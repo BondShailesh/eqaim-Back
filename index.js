@@ -11,6 +11,9 @@ app.use(cors())
 
 app.use('/blogs', blogRoute)
 
-mongoose.connect('mongodb://localhost:27017/blog', () => {
-    app.listen(PORT, () => { console.log('working') })
+app.listen(PORT, () => {
+    mongoose.connect('mongodb+srv://eqaim:12345@cluster0.hdplh8i.mongodb.net/?retryWrites=true&w=majority', () => {
+        console.log('working');
+    })
 })
+
